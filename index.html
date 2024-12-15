@@ -5,14 +5,18 @@
     </head>
     <body>
         <canvas id="myCanvas" style="background-color: black;"></canvas>
+        <script src="track.js"></script>
         <script>
             const size = 700; // defining pixels
             myCanvas.width = size;
             myCanvas.height = size; // using canvas size to autofill script size
 
+            const trackCenter = {x: size / 2, y: size / 2};
+            const trackRadius = 100;
+
             const ctx = myCanvas.getContext("2d"); // getting 2D context
             const track = new Track(trackCenter, trackRadius);
-            track.draw(ctx);
+            track.draw(ctx); // draw method
         </script>
     </body>
 </html>
